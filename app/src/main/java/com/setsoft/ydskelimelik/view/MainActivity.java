@@ -2,7 +2,9 @@ package com.setsoft.ydskelimelik.view;
 
 import android.app.Dialog;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
+import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.EditText;
@@ -35,13 +37,17 @@ public class MainActivity extends AppCompatActivity implements IMainView {
         presenter.onButtonAddWordClicked();
 
     }
+
     public void onButtonClearClicked(View view) {
 
 
-
     }
+
     public void onButtonAddClicked(View view) {
 
+
+        presenter.onButtonClearClicked();
+        Log.e("Spimnner", " " + etEnglish.getText() + "" + spCategories.getSelectedItem());
 
     }
 
@@ -63,8 +69,19 @@ public class MainActivity extends AppCompatActivity implements IMainView {
             btnClear = dialog.findViewById(R.id.btnClear);
             dialog.getWindow().setBackgroundDrawableResource(android.R.color.transparent);
             dialog.setCancelable(true);
+
+
         }
         dialog.show();
+    }
+
+    @Override
+    public void clearCustomDialog() {
+        etTurkish.setText("");
+        etEnglish.setText("");
+        spCategories.setSelection(0);
+
+
     }
 
 }
