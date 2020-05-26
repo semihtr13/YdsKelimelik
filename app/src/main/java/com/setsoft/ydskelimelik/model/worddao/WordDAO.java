@@ -2,10 +2,8 @@ package com.setsoft.ydskelimelik.model.worddao;
 
 import android.content.ContentValues;
 import android.content.Context;
-import android.content.Intent;
 import android.database.Cursor;
 import android.database.sqlite.SQLiteDatabase;
-import android.util.Log;
 
 import com.setsoft.ydskelimelik.model.Word;
 import com.setsoft.ydskelimelik.util.IConstant;
@@ -29,7 +27,7 @@ public class WordDAO implements IDBService<Word>, IConstant.IDBConstant {
 
 
     @Override
-    public boolean insertWord( Word type) {
+    public boolean insertWord(Word type) {
         SQLiteDatabase sqLiteDatabase = wordHelper.getWritableDatabase();
         String insertdate = new SimpleDateFormat("yyyyMMdd", Locale.getDefault()).format(new Date());
 
@@ -78,7 +76,7 @@ public class WordDAO implements IDBService<Word>, IConstant.IDBConstant {
     }
 
     @Override
-    public boolean deleteWord( int id) {
+    public boolean deleteWord(int id) {
         SQLiteDatabase sqLiteDatabase = wordHelper.getWritableDatabase();
         sqLiteDatabase.delete(TABLE_NAME, ID + "=?", new String[]{String.valueOf(id)});
 
@@ -87,7 +85,7 @@ public class WordDAO implements IDBService<Word>, IConstant.IDBConstant {
     }
 
     @Override
-    public boolean stateUpdateWord( int id, int state) {
+    public boolean stateUpdateWord(int id, int state) {
         SQLiteDatabase sqLiteDatabase = wordHelper.getWritableDatabase();
         String learndate = new SimpleDateFormat("yyyyMMdd", Locale.getDefault()).format(new Date());
 
@@ -101,7 +99,7 @@ public class WordDAO implements IDBService<Word>, IConstant.IDBConstant {
     }
 
     @Override
-    public List<Word> findByDate( int date1) {
+    public List<Word> findByDate(int date1) {
         SQLiteDatabase sqLiteDatabase = wordHelper.getWritableDatabase();
         Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM " + TABLE_NAME + " WHERE " + INSERTDATE + " = " + date1, null);
         while (cursor.moveToNext()) {
@@ -120,7 +118,7 @@ public class WordDAO implements IDBService<Word>, IConstant.IDBConstant {
     }
 
     @Override
-    public List<Word> findByState( int state) {
+    public List<Word> findByState(int state) {
         SQLiteDatabase sqLiteDatabase = wordHelper.getWritableDatabase();
         Cursor cursor = sqLiteDatabase.rawQuery("SELECT * FROM " + TABLE_NAME + " WHERE " + STATE + " = " + state, null);
         while (cursor.moveToNext()) {

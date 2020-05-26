@@ -1,6 +1,5 @@
 package com.setsoft.ydskelimelik.model.worddao;
 
-import java.util.ArrayList;
 import java.util.List;
 
 public interface IDBService<T> {

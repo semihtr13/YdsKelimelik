@@ -4,8 +4,6 @@ import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;
 import android.database.sqlite.SQLiteOpenHelper;
 
-import androidx.annotation.Nullable;
-
 import com.setsoft.ydskelimelik.util.IConstant;
 
 public class WordHelper extends SQLiteOpenHelper implements IConstant.IDBConstant {
@@ -17,7 +15,7 @@ public class WordHelper extends SQLiteOpenHelper implements IConstant.IDBConstan
 
     @Override
     public void onCreate(SQLiteDatabase sqLiteDatabase) {
-        sqLiteDatabase.execSQL("CREATE TABLE "+TABLE_NAME+" " +
+        sqLiteDatabase.execSQL("CREATE TABLE " + TABLE_NAME + " " +
                 "(ID INTEGER NOT NULL PRIMARY KEY AUTOINCREMENT, " +
                 "TURKISH TEXT, " +
                 "ENGLISH TEXT, " +
