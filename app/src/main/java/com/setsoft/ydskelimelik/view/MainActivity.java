@@ -2,6 +2,7 @@ package com.setsoft.ydskelimelik.view;
 
 import android.app.Dialog;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.ArrayAdapter;
 import android.widget.Button;
@@ -11,7 +12,13 @@ import android.widget.Spinner;
 import androidx.appcompat.app.AppCompatActivity;
 
 import com.setsoft.ydskelimelik.R;
+import com.setsoft.ydskelimelik.model.Word;
+import com.setsoft.ydskelimelik.model.worddao.WordDAO;
+import com.setsoft.ydskelimelik.model.worddao.WordHelper;
 import com.setsoft.ydskelimelik.presenter.Presenter;
+
+import java.util.ArrayList;
+import java.util.List;
 
 public class MainActivity extends AppCompatActivity implements IMainView {
     private Spinner spCategories;
@@ -35,11 +42,12 @@ public class MainActivity extends AppCompatActivity implements IMainView {
         presenter.onButtonAddWordClicked();
 
     }
+
     public void onButtonClearClicked(View view) {
 
 
-
     }
+
     public void onButtonAddClicked(View view) {
 
 
@@ -65,6 +73,7 @@ public class MainActivity extends AppCompatActivity implements IMainView {
             dialog.setCancelable(true);
         }
         dialog.show();
+
     }
 
 }
