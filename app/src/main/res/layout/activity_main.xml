@@ -1,0 +1,295 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#FD5C72"
+    tools:context=".view.MainActivity">
+
+    <RelativeLayout
+
+        android:id="@+id/rlvtop"
+        android:layout_width="match_parent"
+        android:layout_height="150dp">
+
+        <ImageView
+            android:id="@+id/imgMenu"
+            android:layout_width="60dp"
+            android:layout_height="55dp"
+            android:layout_alignParentStart="true"
+            android:layout_marginStart="20dp"
+            android:layout_marginTop="5dp"
+            android:padding="1dp"
+            android:src="@drawable/character1"/>
+
+        <TextView
+            android:id="@+id/txtName"
+            android:layout_width="100dp"
+            android:layout_height="20sp"
+            android:layout_below="@+id/imgMenu"
+            android:background="@drawable/bg_rlvlevel"
+            android:gravity="center"
+            android:text="@string/username"
+            android:textSize="12sp"
+            android:textStyle="bold"/>
+
+        <ImageView
+
+            android:layout_width="60dp"
+            android:layout_height="55dp"
+            android:layout_alignParentEnd="true"
+            android:layout_marginTop="5dp"
+            android:layout_marginEnd="20dp"
+            android:padding="5dp"
+            android:src="@drawable/ic_add_alert_black_24dp"/>
+
+        <TextView
+            android:id="@+id/txtNext"
+            android:layout_width="100dp"
+            android:layout_height="20sp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginBottom="25dp"
+            android:gravity="center"
+            android:text="@string/ilerleme"
+            android:textSize="15sp"/>
+
+
+        <ProgressBar
+            android:id="@+id/progressBar4"
+            style="?android:attr/progressBarStyleHorizontal"
+            android:layout_width="match_parent"
+            android:layout_height="15dp"
+            android:layout_alignParentBottom="true"
+            android:layout_marginLeft="20dp"
+            android:layout_marginRight="20dp"
+            android:layout_marginBottom="10dp"
+            android:progress="75"
+            android:progressDrawable="@drawable/custom_progress" />
+
+        <TextView
+            android:id="@+id/txtYuzde"
+            android:layout_width="wrap_content"
+            android:layout_height="20dp"
+            android:layout_alignParentBottom="true"
+            android:layout_centerHorizontal="true"
+            android:layout_marginBottom="8dp"
+            android:gravity="center"
+            android:text="% 100"
+            android:textSize="15sp"/>
+
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlvbottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rlvtop"
+        android:background="@drawable/bg_rlvbottom"
+        android:padding="20dp">
+
+        <RelativeLayout
+            android:id="@+id/rlvLevel"
+            android:layout_width="match_parent"
+            android:layout_height="180dp"
+            android:background="@drawable/bg_rlvlevel"
+            android:gravity="center">
+
+            <TextView
+                android:id="@+id/txtGeneral"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:gravity="center"
+                android:text="@string/genel_gorunum"
+                android:textSize="15sp"/>
+
+
+
+
+            <RelativeLayout
+                android:id="@+id/rlvLevelMain"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtGeneral"
+                android:gravity="center">
+
+
+                <com.github.lzyzsd.circleprogress.ArcProgress
+                    android:id="@+id/arc_progress1"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="5dp"
+                    app:arc_bottom_text_size="10sp"
+                    app:arc_finished_color="#FD5C72"
+                    app:arc_max="5000"
+                    app:arc_stroke_width="7dp"
+                    app:arc_suffix_text=" "
+                    app:arc_suffix_text_padding="0dp"
+                    app:arc_text_color="#0c0c0c"
+                    app:arc_text_size="25sp"
+                    app:arc_unfinished_color="#EACBCA"
+                    custom:arc_progress="2555" />
+
+                <com.github.lzyzsd.circleprogress.ArcProgress
+                    android:id="@+id/arc_progress2"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="5dp"
+                    android:layout_toEndOf="@id/arc_progress1"
+                    app:arc_bottom_text_size="10sp"
+                    app:arc_finished_color="#FD5C72"
+                    app:arc_max="5000"
+                    app:arc_stroke_width="7dp"
+                    app:arc_suffix_text=" "
+                    app:arc_suffix_text_padding="5dp"
+                    app:arc_text_color="#0c0c0c"
+                    app:arc_text_size="25sp"
+                    app:arc_unfinished_color="#EACBCA"
+                    custom:arc_progress="55" />
+
+                <com.github.lzyzsd.circleprogress.ArcProgress
+                    android:id="@+id/arc_progress3"
+                    android:layout_width="80dp"
+                    android:layout_height="80dp"
+                    android:layout_margin="5dp"
+                    android:layout_toEndOf="@id/arc_progress2"
+                    app:arc_bottom_text_size="10sp"
+                    app:arc_finished_color="#FD5C72"
+                    app:arc_stroke_width="7dp"
+                    app:arc_suffix_text_padding="5dp"
+                    app:arc_text_color="#0c0c0c"
+                    app:arc_max="5000"
+                    app:arc_suffix_text=" "
+                    app:arc_text_size="25sp"
+                    app:arc_unfinished_color="#EACBCA"
+                    custom:arc_progress="2500" />
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/rlvLevelMain"
+                android:gravity="center">
+
+                <TextView
+                    android:id="@+id/txt1"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:gravity="center"
+                    android:text="@string/kelimelerim"
+                    android:textSize="12sp"/>
+
+                <TextView
+                    android:id="@+id/txt2"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_toEndOf="@id/txt1"
+                    android:gravity="center"
+                    android:text="@string/ogrendiklerim"
+                    android:textSize="12sp"/>
+
+
+
+                <TextView
+                    android:id="@+id/txt3"
+                    android:layout_width="80dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="5dp"
+                    android:layout_toEndOf="@id/txt2"
+                    android:gravity="center"
+                    android:text="@string/kalan"
+                    android:textSize="12sp"/>
+
+
+            </RelativeLayout>
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/rlvLevel"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/txtCategories"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="10dp"
+                android:text="@string/kategoriler"
+                android:textSize="15sp"/>
+
+
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="15dp"
+                android:gravity="center">
+
+                <Button
+                    android:onClick="onButtonAddWordClicked"
+                    android:id="@+id/btnAddWord"
+                    android:layout_width="150dp"
+                    android:layout_height="120dp"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/bg_btn_add_word"
+                    android:text="@string/kelime_ekle"
+                    android:textColor="#fff"/>
+
+
+
+
+                <Button
+                    android:id="@+id/btnMyWords"
+                    android:layout_width="150dp"
+                    android:layout_height="120dp"
+                    android:layout_margin="5dp"
+                    android:layout_toEndOf="@+id/btnAddWord"
+                    android:background="@drawable/bg_btn_my_word"
+                    android:text="@string/kelime_havuzu"
+                    android:textColor="#fff"/>
+
+
+
+                <Button
+                    android:id="@+id/btnLearn"
+                    android:layout_width="150dp"
+                    android:layout_height="120dp"
+                    android:layout_below="@+id/btnAddWord"
+                    android:layout_margin="5dp"
+                    android:background="@drawable/bg_btn_my_learned"
+                    android:text="@string/ogrendiklerim_menu"
+                    android:textColor="#fff"/>
+
+
+                <Button
+                    android:id="@+id/btnQuiz"
+                    android:layout_width="150dp"
+                    android:layout_height="120dp"
+                    android:layout_below="@+id/btnAddWord"
+                    android:layout_margin="5dp"
+                    android:layout_toEndOf="@+id/btnLearn"
+                    android:background="@drawable/bg_btn_exam"
+                    android:text="@string/sinav"
+                    android:textColor="#fff"/>
+
+
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+    </RelativeLayout>
+
+
+</RelativeLayout>

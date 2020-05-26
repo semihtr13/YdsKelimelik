@@ -1,0 +1,28 @@
+<resources>
+    <string name="app_name">YdsKelimelik</string>
+    <string name="kelimelerim">Kelimelerim</string>
+    <string name="ogrendiklerim">Öğrendiklerim</string>
+    <string name="kalan">Kalan</string>
+    <string name="genel_gorunum">Genel Görünüm</string>
+    <string name="ilerleme">İlerleme</string>
+    <string name="username">username</string>
+    <string name="kategoriler">Kategoriler</string>
+    <string name="kelime_ekle">Kelime Ekle</string>
+    <string name="kelime_havuzu">Kelime Havuzu</string>
+    <string name="ogrendiklerim_menu">Öğrendiklerim</string>
+    <string name="sinav">Sınav</string>
+    <string name="ingilizce">İngilizce</string>
+    <string name="turkce">Türkçe</string>
+    <string name="temizle">Temizle</string>
+    <string name="ekle">Ekle</string>
+
+
+    <string-array name="Categories">
+        <item>Kategori Seçiniz</item>
+        <item>İsim</item>
+        <item>Fiil</item>
+        <item>Zamir</item>
+        <item>Zarf</item>
+        <item>Edat</item>
+    </string-array>
+</resources>
