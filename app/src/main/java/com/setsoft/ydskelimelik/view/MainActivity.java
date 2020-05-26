@@ -36,6 +36,8 @@ public class MainActivity extends AppCompatActivity implements IMainView {
         presenter.onCreated();
 
 
+        Log.e("te","sa");
+
     }
 
     public void onButtonAddWordClicked(View view) {
