@@ -1,0 +1,123 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#eb6383"
+    tools:context=".view.AllWordsActivity">
+
+    <TextView
+
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="10dp"
+        android:fontFamily="@font/opensans_regular"
+        android:paddingLeft="10dp"
+        android:text="All Words"
+        android:textColor="#fafafa"
+        android:textSize="25sp" />
+
+
+    <RelativeLayout
+        android:id="@+id/rlvtop"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:padding="10dp">
+
+
+        <SearchView
+            android:id="@+id/searchView"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_above="@id/lnrMenu"
+            android:layout_marginBottom="10dp"
+            android:background="@drawable/bg_allwords_menu"
+            android:clickable="true"
+            android:iconifiedByDefault="false"
+            android:queryBackground="@android:color/transparent"
+            android:queryHint="Search Here" />
+
+        <LinearLayout
+            android:id="@+id/lnrMenu"
+            android:layout_width="match_parent"
+            android:layout_height="35dp"
+            android:layout_alignParentBottom="true"
+            android:background="@drawable/bg_allwords_menu"
+            android:orientation="horizontal"
+            android:weightSum="4">
+
+            <Button
+                android:id="@+id/btnToday"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@drawable/bg_allwords_btn_menu"
+                android:fontFamily="@font/opensans_regular"
+                android:gravity="center"
+                android:onClick="onTodayClick"
+                android:text="Today"
+                android:textAllCaps="false" />
+
+            <Button
+                android:id="@+id/btnWeek"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/opensans_regular"
+                android:gravity="center"
+                android:onClick="onWeeklyClick"
+                android:text="Week"
+                android:textAllCaps="false" />
+
+
+            <Button
+                android:id="@+id/btnMonth"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/opensans_regular"
+                android:gravity="center"
+                android:onClick="onMonthlyClick"
+                android:text="Month"
+                android:textAllCaps="false" />
+
+
+            <Button
+                android:id="@+id/btnAllTime"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:background="@android:color/transparent"
+                android:fontFamily="@font/opensans_regular"
+                android:gravity="center"
+                android:onClick="onAllWordsClick"
+                android:text="All Time"
+                android:textAllCaps="false" />
+
+
+        </LinearLayout>
+
+    </RelativeLayout>
+
+    <RelativeLayout
+        android:id="@+id/rlvbottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rlvtop"
+        android:background="@drawable/bg_rlvbottom"
+        android:padding="20dp">
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recyclerView"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+        </androidx.recyclerview.widget.RecyclerView>
+    </RelativeLayout>
+
+
+</RelativeLayout>

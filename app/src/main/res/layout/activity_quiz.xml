@@ -1,0 +1,132 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:custom="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="#844685"
+    tools:context=".view.QuizActivity">
+
+
+
+
+    <RelativeLayout
+        android:id="@+id/rlvtop"
+        android:layout_width="match_parent"
+        android:layout_height="150dp"
+        android:padding="10dp">
+
+        <ImageView
+            android:id="@+id/arrowBack"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:src="@drawable/ic_arrow_back_black_24dp"/>
+
+        <com.github.lzyzsd.circleprogress.DonutProgress
+            android:id="@+id/progressTimer"
+            android:layout_width="65dp"
+            android:layout_height="65dp"
+            app:donut_progress="5"
+            app:donut_unfinished_color="#fafafa"
+            app:donut_finished_color="#03A9F4"
+             app:donut_max="20"
+            app:donut_text="5"
+            app:donut_text_color="#fafafa"
+            android:layout_centerInParent="true"/>
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Question 1 / 10"
+            android:fontFamily="@font/opensans_regular"
+            android:textColor="#fafafa"
+            android:textSize="20sp"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/progressTimer"/>
+
+
+    </RelativeLayout>
+
+    <LinearLayout
+
+        android:id="@+id/rlvbottom"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/rlvtop"
+        android:background="@drawable/bg_rlvbottom"
+        android:gravity="center"
+        android:orientation="vertical"
+        android:paddingLeft="25dp"
+        android:paddingRight="25sp">
+
+        <TextView
+            android:id="@+id/tvQuestion"
+            android:layout_width="match_parent"
+            android:layout_height="150dp"
+            android:background="@drawable/bg_quiz_question"
+            android:fontFamily="@font/opensans_bold"
+            android:gravity="center"
+            android:text="Lorem Ipsum"
+            android:textColor="#fafafa"
+            android:textSize="25sp" />
+
+        <Button
+            style="?android:attr/buttonBarButtonStyle"
+            android:id="@+id/btn1"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bg_quiz_btn1"
+            android:fontFamily="@font/opensans_regular"
+            android:text="Lorem"
+            android:textAllCaps="false"
+            android:textColor="#0c0c0c" />
+
+        <Button
+            android:id="@+id/btn2"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bg_quiz_btn2"
+            android:fontFamily="@font/opensans_regular"
+            android:text="Lorem"
+            android:textAllCaps="false"
+            android:textColor="#0c0c0c" />
+
+        <Button
+            android:id="@+id/btn3"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bg_quiz_btn3"
+            android:fontFamily="@font/opensans_regular"
+            android:text="Lorem"
+            android:textAllCaps="false"
+            android:textColor="#0c0c0c" />
+
+        <Button
+            android:id="@+id/btn4"
+            android:layout_width="match_parent"
+            android:layout_height="50dp"
+            android:layout_marginTop="15dp"
+            android:background="@drawable/bg_quiz_btn4"
+            android:fontFamily="@font/opensans_regular"
+            android:text="Lorem"
+            android:textAllCaps="false"
+            android:textColor="#0c0c0c" />
+        <Button
+            android:id="@+id/btnNext"
+            android:layout_width="wrap_content"
+            android:layout_height="50dp"
+            android:layout_marginTop="25dp"
+            android:background="@drawable/bg_quiz_btn_next"
+            android:fontFamily="@font/opensans_regular"
+            android:text="Next"
+            android:textAllCaps="false"
+            android:textColor="#fafafa" />
+    </LinearLayout>
+
+
+</RelativeLayout>
