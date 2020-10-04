@@ -1,4 +1,4 @@
-package com.setsoft.ydskelimelik.model.worddao;
+package com.setsoft.ydskelimelik.model.dao;
 
 import android.content.Context;
 import android.database.sqlite.SQLiteDatabase;

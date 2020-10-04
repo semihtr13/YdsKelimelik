@@ -9,7 +9,7 @@ public class Word {
     private int learnDate;
     private int insertDate;
 
-    public Word(int id, String turkish, String english,int state, int learnDate, int insertDate) {
+    public Word(int id, String turkish, String english, int state, int learnDate, int insertDate) {
         this.id = id;
         this.turkish = turkish;
         this.english = english;

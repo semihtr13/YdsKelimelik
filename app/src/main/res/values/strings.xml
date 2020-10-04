@@ -1,16 +1,16 @@
 <resources>
     <string name="app_name">YdsKelimelik</string>
-    <string name="kelimelerim">Kelimelerim</string>
-    <string name="ogrendiklerim">Öğrendiklerim</string>
-    <string name="kalan">Kalan</string>
-    <string name="genel_gorunum">Genel Görünüm</string>
-    <string name="ilerleme">İlerleme</string>
+    <string name="kelimelerim">Words</string>
+    <string name="ogrendiklerim">Learned</string>
+    <string name="kalan">Remaining</string>
+    <string name="ingilizce_top">English</string>
+    <string name="ilerleme">Level</string>
     <string name="username">username</string>
-    <string name="kategoriler">Kategoriler</string>
-    <string name="kelime_ekle">Kelime Ekle</string>
-    <string name="kelime_havuzu">Kelime Havuzu</string>
-    <string name="ogrendiklerim_menu">Öğrendiklerim</string>
-    <string name="sinav">Sınav</string>
+    <string name="kategoriler">Categories</string>
+    <string name="kelime_ekle">Add Word</string>
+    <string name="kelime_havuzu">All Words</string>
+    <string name="ogrendiklerim_menu">What I Learned</string>
+    <string name="sinav">Exam</string>
     <string name="ingilizce">İngilizce</string>
     <string name="turkce">Türkçe</string>
     <string name="temizle">Temizle</string>
